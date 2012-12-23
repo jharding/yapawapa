@@ -1,0 +1,36 @@
+{
+  "name": "Yapawapa",
+  "version": "0.0.0",
+  "description": "",
+  "author": {
+    "name": "Jake Harding",
+    "email": "jacob.s.harding@gmail.com"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "underscore": "~1",
+    "yapa": "~0"
+  },
+  "devDependencies": {
+    "mocha": "~1",
+    "sinon": "~1"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jharding/yapawapa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jharding/yapawapa/issues"
+  },
+  "keywords": [
+    "promises",
+    "futures",
+    "wrapper",
+    "decorator",
+    "yapa"
+  ],
+  "license": "MIT"
+}
