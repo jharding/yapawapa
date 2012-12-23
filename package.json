@@ -6,7 +6,7 @@
     "name": "Jake Harding",
     "email": "jacob.s.harding@gmail.com"
   },
-  "main": "index.js",
+  "main": "lib/yapawapa.js",
   "dependencies": {
     "underscore": "~1",
     "yapa": "~0"

@@ -2,7 +2,7 @@
   , assert = require('assert')
   , sinon = require('sinon')
   , nextTick = process.nextTick
-  , yapawapa = require('../');
+  , yapawapa = require('../lib/yapawapa');
 
 describe('Yapawapa', function() {
   var mockContext = { _test_: true }
