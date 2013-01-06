@@ -19,7 +19,7 @@ describe('Yapawapa', function() {
       , getContext: function() { return this; }
       , getArgs: function(arg1, arg2) { return [].slice.call(arguments, 0); }
       }
-    , Promise = yapawapa(funcs);
+    , Promise = yapawapa.decorate(funcs);
 
   it('should add wrapped methods to Promise prototype', function() {
     assert.equal(typeof Promise.prototype.fn1, 'function');
