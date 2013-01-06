@@ -3,7 +3,7 @@
 Yapawapa
 ========
 
-Yapawapa is a decorator of [Yapa](https://github.com/jharding/yapa) promises. It makes it easy to add arbitrary functions to the prototype of a Yapa promise constructor. Those functions can then seamlessly be used within a promise chain.
+Yapawapa is a decorator for [Yapa](https://github.com/jharding/yapa) promises. It makes it easy to add arbitrary functions to the prototype of a Yapa promise constructor. Those functions can then seamlessly be used within a promise chain.
 
 Installation
 ------------
