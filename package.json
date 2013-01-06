@@ -1,5 +1,5 @@
 {
-  "name": "Yapawapa",
+  "name": "yapawapa",
   "version": "0.0.0",
   "description": "",
   "author": {
@@ -16,7 +16,7 @@
     "sinon": "~1"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --reporter spec"
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "url": "https://github.com/jharding/yapawapa/issues"
   },
   "keywords": [
+    "Promises/A+",
     "promises",
     "futures",
     "wrapper",
