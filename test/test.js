@@ -39,7 +39,7 @@ describe('Yapawapa', function() {
     .async()
     .then(function(val) { assert.equal(val, 'async'); done(); });
 
-    promise.resolve();
+    promise.fulfill();
   });
 
   it('should propogate error', function(done) {
@@ -58,7 +58,7 @@ describe('Yapawapa', function() {
       done();
     });
 
-    promise.resolve();
+    promise.fulfill();
   });
 
   it('should call methods in correct context', function(done) {
@@ -76,7 +76,7 @@ describe('Yapawapa', function() {
       done();
     });
 
-    promise.resolve();
+    promise.fulfill();
   });
 
   it('should call methods with correct arguments', function(done) {
@@ -92,6 +92,6 @@ describe('Yapawapa', function() {
       done();
     });
 
-    promise.resolve();
+    promise.fulfill();
   });
 });
