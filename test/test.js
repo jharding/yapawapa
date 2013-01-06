@@ -5,8 +5,7 @@
   , yapawapa = require('../lib/yapawapa');
 
 describe('Yapawapa', function() {
-  var mockContext = { _test_: true }
-    , errors = {
+  var errors = {
         sync: new Error('sync error')
       , async: new Error('async error')
       }
@@ -14,9 +13,9 @@ describe('Yapawapa', function() {
         fn1: function() {}
       , fn2: function() {}
       , sync: function() { return 'sync'; }
-      , async: function(cb) { nextTick(function() { cb(null, 'async'); }) }
+      , async: function(cb) { nextTick(function() { cb(null, 'async'); }); }
       , syncFail: function() { throw errors.sync; }
-      , asyncFail: function(cb) { nextTick(function() { cb(errors.async); }) }
+      , asyncFail: function(cb) { nextTick(function() { cb(errors.async); }); }
       , getContext: function() { return this; }
       , getArgs: function(arg1, arg2) { return [].slice.call(arguments, 0); }
       }
@@ -31,7 +30,7 @@ describe('Yapawapa', function() {
     assert((new Promise().fn1()) instanceof Promise);
   });
 
-  it('should call fulfillment handler with correct value', function(done) {
+  it('should call fulfillment handler with correct args', function(done) {
     var promise = new Promise();
 
     promise
@@ -57,15 +56,20 @@ describe('Yapawapa', function() {
     .error(function(err) {
       assert.equal(err.message, errors.async.message);
       done();
-    })
+    });
 
     promise.resolve();
   });
 
   it('should call methods in correct context', function(done) {
-    var promise = new Promise({ context: mockContext });
+    var mockContext = { _test_: true }
+      , promise = new Promise(mockContext);
 
     promise
+    .getContext()
+    .then(function(context) {
+      assert.strictEqual(context, mockContext);
+    })
     .getContext()
     .then(function(context) {
       assert.strictEqual(context, mockContext);
