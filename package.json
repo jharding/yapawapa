@@ -1,7 +1,7 @@
 {
   "name": "yapawapa",
   "version": "0.1.0",
-  "description": "",
+  "description": "Decorator for Yapa promises",
   "author": {
     "name": "Jake Harding",
     "email": "jacob.s.harding@gmail.com"
